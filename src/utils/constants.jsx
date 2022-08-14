@@ -1,8 +1,8 @@
 export const lightTheme = {
-  primary: "rgb(200, 117, 196)",
+  primary: "red",
   //color
 };
 export const darkTheme = {
-  primary: "rgb(200, 117, 147)",
+  primary: "blue",
   //color
 };

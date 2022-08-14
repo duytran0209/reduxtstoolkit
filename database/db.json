@@ -1,0 +1,22 @@
+{
+  "categories": [
+    {
+      "name": "evondev",
+      "id": 1,
+      "createAt": "1234",
+      "updateAt": "1234"
+    },
+    {
+      "name": "laptop",
+      "id": 2
+    },
+    {
+      "name": "laptop",
+      "id": 3
+    },
+    {
+      "name": "laptop",
+      "id": 4
+    }
+  ]
+}

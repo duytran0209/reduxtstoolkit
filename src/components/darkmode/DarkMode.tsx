@@ -10,6 +10,7 @@ const DarkMode = () => {
   const handleChangeToggler = () => {
     dispatch(uiActions.toggleTheme());
   };
+
   return (
     <DarkmodeStyled>
       <div className="left-content">
