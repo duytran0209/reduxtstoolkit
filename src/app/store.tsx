@@ -1,5 +1,10 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
 import uiSlice from "../slices/uiSlice";
+import createSagaMiddleware from "redux-saga";
+import rootSaga from "./rootSaga";
+
+const sagaMiddleware = createSagaMiddleware();
+
 export const store = configureStore({
   reducer: {
     ui: uiSlice.reducer,
@@ -8,7 +13,11 @@ export const store = configureStore({
     icecream: icecreamReducer,
     */
   },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(sagaMiddleware),
 });
+
+sagaMiddleware.run(rootSaga);
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
 export type RootState = ReturnType<typeof store.getState>;
