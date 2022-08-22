@@ -9,5 +9,5 @@ export interface AdminProps {
 
 const AdminStyled = styled.div``;
 export const Admin: React.FC<AdminProps> = memo(({ children }) => {
-  return <AdminStyled></AdminStyled>;
+  return <AdminStyled>A</AdminStyled>;
 });
