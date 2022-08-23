@@ -17,6 +17,7 @@ const initialState: AuthState = {
   logging: false,
   currentUser: undefined,
 };
+
 const authSlice = createSlice({
   name: "auth",
   initialState,
@@ -32,20 +33,21 @@ const authSlice = createSlice({
     loginFailed(state, action: PayloadAction<string>) {
       state.logging = false;
     },
+
     logout(state) {
       state.isLoggedIn = false;
       state.currentUser = undefined;
     },
   },
 });
-// actions
-export const authActions = authSlice.actions;
-// selectors
-export const selectIsLoggedIn = (state: { auth: { isLoggedIn: any } }) =>
-  state.auth.isLoggedIn;
-export const selectIsLogging = (state: { auth: { logging: any } }) =>
-  state.auth.logging;
 
-// reducer
+// Actions
+export const authActions = authSlice.actions;
+
+// Selectors
+export const selectIsLoggedIn = (state: any) => state.auth.isLoggedIn;
+export const selectIsLogging = (state: any) => state.auth.logging;
+
+// Reducer
 const authReducer = authSlice.reducer;
 export default authReducer;

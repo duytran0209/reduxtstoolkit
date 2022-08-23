@@ -12,4 +12,5 @@ export default function* rootSaga() {
   console.log("root saga");
   yield all([helloSaga(), authSaga()]);
   // chay tat ca saga trong function rootSaga; rootSaga chi chay 1 lan
+  // co key accessToken thi no se dang nhap
 }
