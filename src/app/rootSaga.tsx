@@ -1,4 +1,5 @@
 import { all } from "redux-saga/effects";
+import authSaga from "../features/auth/authSaga";
 
 function* helloSaga() {
   yield all([
@@ -9,6 +10,6 @@ function* helloSaga() {
 
 export default function* rootSaga() {
   console.log("root saga");
-  yield all([helloSaga()]);
+  yield all([helloSaga(), authSaga()]);
   // chay tat ca saga trong function rootSaga; rootSaga chi chay 1 lan
 }

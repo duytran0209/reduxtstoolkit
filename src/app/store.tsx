@@ -1,17 +1,15 @@
-import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 import uiSlice from "../slices/uiSlice";
 import createSagaMiddleware from "redux-saga";
 import rootSaga from "./rootSaga";
+import authReducer from "features/auth/authSlice";
 
 const sagaMiddleware = createSagaMiddleware();
 
 export const store = configureStore({
   reducer: {
     ui: uiSlice.reducer,
-    /*
-    cake: cakeReducer,
-    icecream: icecreamReducer,
-    */
+    auth: authReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(sagaMiddleware),

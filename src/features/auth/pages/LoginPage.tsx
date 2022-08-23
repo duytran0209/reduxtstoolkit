@@ -3,8 +3,20 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import styled from "styled-components";
+import { useAppDispatch } from "../../../app/hook";
+import { authActions } from "../authSlice";
 
 const LoginPage = () => {
+  const dispatch = useAppDispatch();
+  const handleLogginClick = () => {
+    dispatch(
+      authActions.login({
+        username: "admin",
+        password: "admin",
+      })
+    );
+  };
+
   return (
     <LoginPageStyled>
       <Paper elevation={1} className="box">
@@ -13,7 +25,12 @@ const LoginPage = () => {
         </Typography>
 
         <Box>
-          <Button fullWidth variant="contained" color="primary">
+          <Button
+            fullWidth
+            variant="contained"
+            color="primary"
+            onClick={handleLogginClick}
+          >
             Fake Login
           </Button>
         </Box>
