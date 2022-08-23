@@ -1,16 +1,9 @@
 import { all } from "redux-saga/effects";
 import authSaga from "../features/auth/authSaga";
-
-function* helloSaga() {
-  yield all([
-    console.log("hello saga"),
-    // ... other sagas
-  ]);
-}
+import citySaga from "../features/auth/city/CitySaga";
+import dashboardSaga from "../features/dashboard/dashboardSaga";
+import studentSaga from "../features/student/studentSaga";
 
 export default function* rootSaga() {
-  console.log("root saga");
-  yield all([helloSaga(), authSaga()]);
-  // chay tat ca saga trong function rootSaga; rootSaga chi chay 1 lan
-  // co key accessToken thi no se dang nhap
+  yield all([authSaga(), dashboardSaga(), studentSaga(), citySaga()]);
 }

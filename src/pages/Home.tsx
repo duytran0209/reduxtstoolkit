@@ -4,7 +4,6 @@ import styled from "styled-components";
 const Home = () => {
   return (
     <HomeStyled>
-      <p>Xin chao cac ban</p>
       <DarkMode />
     </HomeStyled>
   );
