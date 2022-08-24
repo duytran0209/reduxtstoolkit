@@ -6,6 +6,7 @@ import { useAppSelector } from "../src/app/hook";
 import Home from "./pages/Home";
 import LoginPage from "./features/auth/pages/LoginPage";
 import { darkTheme, lightTheme } from "utils/constants";
+import Dashboard from "./features/dashboard/index";
 const App = memo(() => {
   const { theme } = useAppSelector((state) => state.ui);
   const currentTheme = theme === "light" ? lightTheme : darkTheme;
@@ -16,6 +17,7 @@ const App = memo(() => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/admin/dashboard" element={<Dashboard />} />
         </Routes>
       </Suspense>
     </ThemeProvider>

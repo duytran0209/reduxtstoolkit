@@ -1,5 +1,4 @@
 import { TextField } from "@mui/material";
-import * as React from "react";
 import { InputHTMLAttributes } from "react";
 import { Control, useController } from "react-hook-form";
 
@@ -17,7 +16,7 @@ export function InputField({
 }: InputFieldProps) {
   const {
     field: { value, onChange, onBlur, ref },
-    fieldState: { invalid, error },
+    fieldState: { error },
   } = useController({
     name,
     control,
@@ -34,7 +33,6 @@ export function InputField({
       label={label}
       variant="outlined"
       inputRef={ref}
-      error={invalid}
       helperText={error?.message}
       inputProps={inputProps}
     />

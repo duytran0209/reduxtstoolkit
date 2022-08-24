@@ -1,11 +1,11 @@
 import * as React from "react";
-// import Dashboard from "features/dashboard";
-// import StudentFeature from "features/student";
 import { Route, Routes } from "react-router-dom";
 import Box from "@mui/material/Box";
 import styled from "styled-components";
 import { Header } from "../common/Header";
 import { Sidebar } from "../common/SideBar";
+import Dashboard from "features/dashboard";
+import StudentFeature from "features/student";
 
 const AdminStyled = styled.div`
   .root {
@@ -42,13 +42,12 @@ export function AdminLayout() {
           <Sidebar />
         </Box>
 
-        <Box className="main">
+        {/* <Box className="main">
           <Routes>
-            <Route path="/admin/dashboard">{/* <Dashboard /> */}</Route>
-
-            <Route path="/admin/students">{/* <StudentFeature /> */}</Route>
+            <Route path="/admin/dashboard" element={<Dashboard />} />
+            <Route path="/admin/students" element={<StudentFeature />} />
           </Routes>
-        </Box>
+        </Box> */}
       </Box>
     </AdminStyled>
   );

@@ -1,7 +1,5 @@
-import React, { memo, useState } from "react";
+import React, { memo } from "react";
 import styled from "styled-components";
-
-export interface NotFoundStates {}
 
 export interface NotFoundProps {
   children?: string;

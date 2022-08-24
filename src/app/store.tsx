@@ -1,9 +1,4 @@
-import {
-  Action,
-  combineReducers,
-  configureStore,
-  ThunkAction,
-} from "@reduxjs/toolkit";
+import { Action, configureStore, ThunkAction } from "@reduxjs/toolkit";
 import uiSlice from "../slices/uiSlice";
 import dashboardReducer from "features/dashboard/dashboardSlice";
 import studentReducer from "features/student/studentSlice";
@@ -12,17 +7,15 @@ import cityReducer from "../features/auth/city/CitySlice";
 import authReducer from "features/auth/authSlice";
 import rootSaga from "./rootSaga";
 
-const rootReducer = combineReducers({
-  auth: authReducer,
-  dashboard: dashboardReducer,
-  student: studentReducer,
-  city: cityReducer,
-  ui: uiSlice.reducer,
-});
-
 const sagaMiddleware = createSagaMiddleware();
 export const store = configureStore({
-  reducer: rootReducer,
+  reducer: {
+    auth: authReducer,
+    dashboard: dashboardReducer,
+    student: studentReducer,
+    city: cityReducer,
+    ui: uiSlice.reducer,
+  },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(sagaMiddleware),
 });

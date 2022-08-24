@@ -1,7 +1,7 @@
+import React from "react";
 import { List, ListItem, ListItemIcon, ListItemText } from "@mui/material";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
-import React from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 

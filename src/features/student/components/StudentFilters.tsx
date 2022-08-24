@@ -7,6 +7,7 @@ import {
   MenuItem,
   OutlinedInput,
   Select,
+  SelectChangeEvent,
 } from "@mui/material";
 import { City, ListParams } from "models";
 import SearchIcon from "@mui/icons-material/Search";
@@ -38,9 +39,7 @@ export default function StudentFilters({
     onSearchChange(newFilter);
   };
 
-  const handleCityChange = (
-    e: ChangeEvent<{ name?: string; value: unknown }>
-  ) => {
+  const handleCityChange = (e: SelectChangeEvent<any>) => {
     if (!onChange) return;
 
     const newFilter: ListParams = {
@@ -51,9 +50,7 @@ export default function StudentFilters({
     onChange(newFilter);
   };
 
-  const handleSortChange = (
-    e: ChangeEvent<{ name?: string; value: unknown }>
-  ) => {
+  const handleSortChange = (e: SelectChangeEvent<any>) => {
     if (!onChange) return;
 
     const value = e.target.value;
@@ -110,6 +107,7 @@ export default function StudentFilters({
               onChange={handleCityChange}
               label="Filter by city"
             >
+              {/* e: SelectChangeEvent<any> */}
               <MenuItem value="">
                 <em>All</em>
               </MenuItem>

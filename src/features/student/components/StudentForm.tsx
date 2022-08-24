@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { Student } from "../../../models/student";
@@ -7,10 +6,10 @@ import { useAppSelector } from "../../../app/hook";
 import Box from "@mui/material/Box";
 import { Alert, Button, CircularProgress } from "@mui/material";
 import { selectCityOptions } from "features/auth/city/CitySlice";
-import { yupResolver } from "@hookform/resolvers/yup";
 import { InputField } from "../../../components/formFields/InputField";
 import { RadioGroupField } from "../../../components/formFields/RadioGroupField";
 import { SelectField } from "../../../components/formFields/SelectField";
+import { yupResolver } from "@hookform/resolvers/yup";
 
 export interface StudentFormProps {
   initialValues?: Student;
@@ -65,14 +64,7 @@ export default function StudentForm({
   });
 
   const handleFormSubmit = async (formValues: Student) => {
-    try {
-      // Clear previous submission error
-      setError("");
-
-      await onSubmit?.(formValues);
-    } catch (error) {
-      setError(error.message);
-    }
+    setError("");
   };
 
   return (

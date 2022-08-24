@@ -1,12 +1,11 @@
 import React, { useEffect } from "react";
-import { Route, Routes, useRouteMatch } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import AddEditPage from "./pages/AddEditPage";
 import ListPage from "./pages/ListPage";
 import { useAppDispatch } from "../../app/hook";
 import { cityActions } from "../auth/city/CitySlice";
 
 export default function StudentFeature() {
-  const match = useRouteMatch();
   const dispatch = useAppDispatch();
 
   useEffect(() => {
@@ -15,15 +14,15 @@ export default function StudentFeature() {
 
   return (
     <Routes>
-      <Route path={match.path}>
+      <Route path="/admin/students">
         <ListPage />
       </Route>
 
-      <Route path={`${match.path}/add`}>
+      <Route path="/admin/students/add">
         <AddEditPage />
       </Route>
 
-      <Route path={`${match.path}/:studentId`}>
+      <Route path="/admin/students/:studentId">
         <AddEditPage />
       </Route>
     </Routes>

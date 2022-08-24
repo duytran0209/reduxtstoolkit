@@ -31,7 +31,7 @@ export function SelectField({
 }: SelectFieldProps) {
   const {
     field: { value, onChange, onBlur },
-    fieldState: { invalid, error },
+    fieldState: { error },
   } = useController({
     name,
     control,
@@ -44,7 +44,6 @@ export function SelectField({
       margin="normal"
       size="small"
       disabled={disabled}
-      error={invalid}
     >
       <InputLabel id={`${name}_label`}>{label}</InputLabel>
       <Select

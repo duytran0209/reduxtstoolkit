@@ -1,4 +1,3 @@
-import * as React from "react";
 import {
   FormControl,
   FormControlLabel,
@@ -31,19 +30,14 @@ export function RadioGroupField({
 }: RadioGroupFieldProps) {
   const {
     field: { value, onChange, onBlur },
-    fieldState: { invalid, error },
+    fieldState: { error },
   } = useController({
     name,
     control,
   });
 
   return (
-    <FormControl
-      disabled={disabled}
-      margin="normal"
-      component="fieldset"
-      error={invalid}
-    >
+    <FormControl disabled={disabled} margin="normal" component="fieldset">
       <FormLabel component="legend">{label}</FormLabel>
 
       <RadioGroup name={name} value={value} onChange={onChange} onBlur={onBlur}>
