@@ -1,9 +1,5 @@
 import { useState } from "react";
-import {
-  InputField,
-  RadioGroupField,
-  SelectField,
-} from "components/FormFields";
+
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { Student } from "../../../models/student";
@@ -12,6 +8,9 @@ import Box from "@mui/material/Box";
 import { Alert, Button, CircularProgress } from "@mui/material";
 import { selectCityOptions } from "features/auth/city/CitySlice";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { InputField } from "../../../components/formFields/InputField";
+import { RadioGroupField } from "../../../components/formFields/RadioGroupField";
+import { SelectField } from "../../../components/formFields/SelectField";
 
 export interface StudentFormProps {
   initialValues?: Student;

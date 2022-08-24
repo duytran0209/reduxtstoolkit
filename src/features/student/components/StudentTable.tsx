@@ -122,7 +122,7 @@ export default function StudentTable({
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose} color="default" variant="outlined">
+          <Button onClick={handleClose} color="primary" variant="outlined">
             Cancel
           </Button>
 

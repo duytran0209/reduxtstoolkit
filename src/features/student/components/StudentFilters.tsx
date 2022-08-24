@@ -1,3 +1,4 @@
+import React, { ChangeEvent, useRef } from "react";
 import {
   Box,
   FormControl,
@@ -8,8 +9,8 @@ import {
   Select,
 } from "@mui/material";
 import { City, ListParams } from "models";
-import React, { ChangeEvent, useRef } from "react";
 import SearchIcon from "@mui/icons-material/Search";
+import { Button } from "@mui/material";
 export interface StudentFiltersProps {
   filter: ListParams;
   cityList: City[];

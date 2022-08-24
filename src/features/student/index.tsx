@@ -1,9 +1,9 @@
-import { useAppDispatch } from "app/hooks";
-import { cityActions } from "features/city/citySlice";
 import React, { useEffect } from "react";
 import { Route, Routes, useRouteMatch } from "react-router-dom";
 import AddEditPage from "./pages/AddEditPage";
 import ListPage from "./pages/ListPage";
+import { useAppDispatch } from "../../app/hook";
+import { cityActions } from "../auth/city/CitySlice";
 
 export default function StudentFeature() {
   const match = useRouteMatch();

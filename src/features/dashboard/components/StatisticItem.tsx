@@ -16,8 +16,8 @@ const StatisticItemStyled = styled.div`
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    padding: ${(props) => props.theme.spacing(2)}px;
-    border: 1px solid ${(props) => props.theme.palette.divider};
+    padding: 16px;
+    border: 1px solid gray;
   }
 `;
 

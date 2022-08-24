@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Table,
   TableBody,
@@ -6,7 +7,6 @@ import {
   TableHead,
   TableRow,
 } from "@mui/material";
-import React from "react";
 import { Student } from "../../../models/student";
 
 export interface StudentRankingListProps {

@@ -1,2 +1,2 @@
-import { Admin } from "./Admin";
-export { Admin };
+import { AdminLayout } from "./Admin";
+export { AdminLayout };
