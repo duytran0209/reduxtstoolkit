@@ -42,12 +42,12 @@ export function AdminLayout() {
           <Sidebar />
         </Box>
 
-        {/* <Box className="main">
+        <Box className="main">
           <Routes>
             <Route path="/admin/dashboard" element={<Dashboard />} />
             <Route path="/admin/students" element={<StudentFeature />} />
           </Routes>
-        </Box> */}
+        </Box>
       </Box>
     </AdminStyled>
   );

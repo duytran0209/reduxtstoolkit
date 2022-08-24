@@ -84,7 +84,6 @@ export default function ListPage() {
   };
 
   const handleEditStudent = async (student: Student) => {
-    // navigate(`${match.url}/${student.id}`);
     navigate("/admin/students/:studentId");
   };
 
